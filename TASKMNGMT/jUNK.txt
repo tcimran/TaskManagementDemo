@@ -1,0 +1,109 @@
+﻿<ContentPage.Resources>
+        <hc:TaskDataTemplateSelector x:Key="TaskTemplateSelector">
+            <hc:TaskDataTemplateSelector.ReadOnlyTemplate>
+                <DataTemplate>
+                    <SwipeView>
+                        <SwipeView.LeftItems>
+                            <SwipeItems Mode="Reveal">
+                                <SwipeItem Text="{Binding Source={RelativeSource AncestorType={x:Type vm:MainPageViewModels}},Path=taskvm.BtnStatus}"
+BackgroundColor="LightBlue"
+                   Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MainPageViewModels}},Path=taskvm.EditTaskCommand}"
+                   CommandParameter="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}}}"
+                                    
+ />
+                                <SwipeItem Text="Delete"
+BackgroundColor="LightCoral"
+Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MainPageViewModels}},Path=taskvm.DeleteTaskCommand}"
+CommandParameter="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}}}"
+                  
+                  />
+                            </SwipeItems>
+                        </SwipeView.LeftItems>
+                        <Grid Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=id}" Grid.Column="0"  IsReadOnly="True" IsEnabled="False"/>
+                            <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=TaskName}" Grid.Column="1" IsEnabled="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=IsEditable}"/>
+                            <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=TaskStartTime}" Grid.Column="2" IsEnabled="False"/>
+                            <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=TaskEndTime}" Grid.Column="3" IsEnabled="False"/>
+                            <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=TaskTimeTaken}" Grid.Column="4" IsEnabled="False"/>
+                            <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=SelectedProject.ProjectName}" Grid.Column="5"
+IsEnabled="False"
+IsVisible="{Binding Source={RelativeSource AncestorType={x:Type vm:MainPageViewModels}},Path=taskvm.showentryfield}"
+      
+      />
+                            <Picker 
+       ItemsSource="{Binding Source={RelativeSource AncestorType={x:Type vm:MainPageViewModels}},Path=projectvm.Projects}"  
+       ItemDisplayBinding="{Binding ProjectName}"
+       SelectedItem="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=SelectedProject}" Grid.Column="5"
+       FontSize="12"
+       IsVisible="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=IsEditable}"
+
+       />
+
+                        </Grid>
+                    </SwipeView>
+                   
+                    
+                </DataTemplate>
+            </hc:TaskDataTemplateSelector.ReadOnlyTemplate>
+            <hc:TaskDataTemplateSelector.EditableTemplate>
+                <DataTemplate>
+                    <SwipeView>
+                        <SwipeView.LeftItems>
+                            <SwipeItems Mode="Reveal">
+                                                                <SwipeItem Text="{Binding Source={RelativeSource AncestorType={x:Type vm:MainPageViewModels}},Path=taskvm.BtnStatus}"
+BackgroundColor="LightBlue"
+                   Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MainPageViewModels}},Path=taskvm.EditTaskCommand}"
+                   CommandParameter="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}}}"
+                                    
+ />
+                                <SwipeItem Text="Delete"
+BackgroundColor="LightCoral"
+Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MainPageViewModels}},Path=taskvm.DeleteTaskCommand}"
+CommandParameter="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}}}"/>
+
+                            </SwipeItems>
+                        </SwipeView.LeftItems>
+
+                        <Grid Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=id}" Grid.Column="0"  IsReadOnly="True" IsEnabled="False"/>
+                            <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=TaskName}" Grid.Column="1" IsEnabled="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=IsEditable}"/>
+                            <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=TaskStartTime}" Grid.Column="2" IsEnabled="False"/>
+                            <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=TaskEndTime}" Grid.Column="3" IsEnabled="False"/>
+                            <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=TaskTimeTaken}" Grid.Column="4" IsEnabled="False"/>
+                            <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=SelectedProject.ProjectName}" Grid.Column="5"
+IsEnabled="False"
+IsVisible="{Binding Source={RelativeSource AncestorType={x:Type vm:MainPageViewModels}},Path=taskvm.showentryfield}"
+      
+      />
+                            <Picker 
+       ItemsSource="{Binding Source={RelativeSource AncestorType={x:Type vm:MainPageViewModels}},Path=projectvm.Projects}"  
+       ItemDisplayBinding="{Binding ProjectName}"
+       SelectedItem="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=SelectedProject}" Grid.Column="5"
+       FontSize="12"
+       IsVisible="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=IsEditable}"
+
+       />
+
+                        </Grid>
+                    </SwipeView>
+  
+                </DataTemplate>
+            </hc:TaskDataTemplateSelector.EditableTemplate>
+        </hc:TaskDataTemplateSelector>
+    </ContentPage.Resources>

@@ -29,25 +29,25 @@
     <AppXManifest Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-09-10T20:48:09.790</Modified>
+      <Modified>2024-12-25T17:04:56.333</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-09-10T16:07:54.800</Modified>
+      <Modified>2024-12-25T13:16:33.586</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TASKMNGMT.runtimeconfig.json">
       <PackagePath>TASKMNGMT.runtimeconfig.json</PackagePath>
-      <Modified>2024-09-09T16:34:42.569</Modified>
+      <Modified>2024-12-25T13:16:33.274</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TASKMNGMT.dll">
       <PackagePath>TASKMNGMT.dll</PackagePath>
-      <Modified>2024-09-10T20:48:09.235</Modified>
+      <Modified>2024-12-25T17:04:55.781</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>TASKMNGMT.exe</PackagePath>
-      <Modified>2024-09-10T20:48:09.242</Modified>
+      <Modified>2024-12-25T17:04:55.788</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -55,23 +55,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2024-09-04T17:42:21.874</Modified>
+      <Modified>2024-12-25T13:16:29.978</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2024-09-04T17:42:21.895</Modified>
+      <Modified>2024-12-25T13:16:29.995</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2024-09-04T17:42:21.929</Modified>
+      <Modified>2024-12-25T13:16:30.019</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2024-09-04T17:42:21.969</Modified>
+      <Modified>2024-12-25T13:16:30.050</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2024-09-04T17:42:22.147</Modified>
+      <Modified>2024-12-25T13:16:30.187</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -83,211 +83,211 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2024-09-04T17:42:24.043</Modified>
+      <Modified>2024-12-25T13:16:31.549</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.036</Modified>
+      <Modified>2024-12-25T13:16:31.543</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.036</Modified>
+      <Modified>2024-12-25T13:16:31.543</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.036</Modified>
+      <Modified>2024-12-25T13:16:31.543</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.036</Modified>
+      <Modified>2024-12-25T13:16:31.543</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.035</Modified>
+      <Modified>2024-12-25T13:16:31.543</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.041</Modified>
+      <Modified>2024-12-25T13:16:31.546</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.040</Modified>
+      <Modified>2024-12-25T13:16:31.546</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.040</Modified>
+      <Modified>2024-12-25T13:16:31.545</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.040</Modified>
+      <Modified>2024-12-25T13:16:31.546</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.040</Modified>
+      <Modified>2024-12-25T13:16:31.545</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.042</Modified>
+      <Modified>2024-12-25T13:16:31.547</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.041</Modified>
+      <Modified>2024-12-25T13:16:31.547</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.041</Modified>
+      <Modified>2024-12-25T13:16:31.546</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.041</Modified>
+      <Modified>2024-12-25T13:16:31.547</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.041</Modified>
+      <Modified>2024-12-25T13:16:31.546</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.043</Modified>
+      <Modified>2024-12-25T13:16:31.549</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.043</Modified>
+      <Modified>2024-12-25T13:16:31.549</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.043</Modified>
+      <Modified>2024-12-25T13:16:31.549</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.043</Modified>
+      <Modified>2024-12-25T13:16:31.548</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.043</Modified>
+      <Modified>2024-12-25T13:16:31.548</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.042</Modified>
+      <Modified>2024-12-25T13:16:31.548</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.042</Modified>
+      <Modified>2024-12-25T13:16:31.548</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.042</Modified>
+      <Modified>2024-12-25T13:16:31.547</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.042</Modified>
+      <Modified>2024-12-25T13:16:31.548</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.042</Modified>
+      <Modified>2024-12-25T13:16:31.547</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.038</Modified>
+      <Modified>2024-12-25T13:16:31.544</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.037</Modified>
+      <Modified>2024-12-25T13:16:31.544</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.037</Modified>
+      <Modified>2024-12-25T13:16:31.544</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.037</Modified>
+      <Modified>2024-12-25T13:16:31.544</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.037</Modified>
+      <Modified>2024-12-25T13:16:31.544</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.038</Modified>
+      <Modified>2024-12-25T13:16:31.545</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.038</Modified>
+      <Modified>2024-12-25T13:16:31.545</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.038</Modified>
+      <Modified>2024-12-25T13:16:31.545</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.038</Modified>
+      <Modified>2024-12-25T13:16:31.544</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.038</Modified>
+      <Modified>2024-12-25T13:16:31.544</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.039</Modified>
+      <Modified>2024-12-25T13:16:31.545</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.039</Modified>
+      <Modified>2024-12-25T13:16:31.545</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.039</Modified>
+      <Modified>2024-12-25T13:16:31.545</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.039</Modified>
+      <Modified>2024-12-25T13:16:31.545</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.038</Modified>
+      <Modified>2024-12-25T13:16:31.545</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.037</Modified>
+      <Modified>2024-12-25T13:16:31.544</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.037</Modified>
+      <Modified>2024-12-25T13:16:31.544</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.036</Modified>
+      <Modified>2024-12-25T13:16:31.543</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.036</Modified>
+      <Modified>2024-12-25T13:16:31.543</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.036</Modified>
+      <Modified>2024-12-25T13:16:31.543</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.035</Modified>
+      <Modified>2024-12-25T13:16:31.550</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.035</Modified>
+      <Modified>2024-12-25T13:16:31.550</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.035</Modified>
+      <Modified>2024-12-25T13:16:31.550</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.035</Modified>
+      <Modified>2024-12-25T13:16:31.549</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2024-09-04T17:42:24.035</Modified>
+      <Modified>2024-12-25T13:16:31.549</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Linux\MY_PROJECTS\other\TaskManagementDemo\TASKMNGMT\TASKMNGMT\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TASKMNGMT.deps.json">
       <PackagePath>TASKMNGMT.deps.json</PackagePath>
-      <Modified>2024-09-10T16:07:54.503</Modified>
+      <Modified>2024-12-25T13:16:33.247</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

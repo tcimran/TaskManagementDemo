@@ -25,7 +25,7 @@ namespace TASKMNGMT.Models.ViewModels
             set => SetProperty(ref _btnColor, value);
         }
 
-        private string _btnText = "To-Do";
+        private string _btnText = "Task-List";
 
         public string BtnText
         {
@@ -43,7 +43,7 @@ namespace TASKMNGMT.Models.ViewModels
             projectvm = new ProjectDetailsViewModel();
             todovm = new TODO_ViewModel();
             taskvm = new TaskMaViewModel(projectvm);
-            isToDoListVisible = false;
+            isToDoListVisible = true;
         }
 
         [RelayCommand]

@@ -70,7 +70,7 @@ namespace TASKMNGMT.Models.ViewModels
         #region ObservableProperties
 
         [ObservableProperty]
-        private ObservableRangeCollection<TaskMang> tasks;
+        private ObservableCollection<TaskMang> tasks;
 
         [ObservableProperty]
         private TaskMang selectedItem;
@@ -106,23 +106,24 @@ namespace TASKMNGMT.Models.ViewModels
             _isPaused = false;
             enablestart = true;
             BtnStatus = "Edits";
-            tasks = new ObservableRangeCollection<TaskMang>();
+            tasks = new BulkObservableCollection<TaskMang>();
             //isRefreshing = false;
             selectedItem = null;
             //_popupWindow = new Popup();
             //LoadTasksFromExcelAsync();
 
             // Load data asynchronously
-            //LoadData();
-            DemoUploadAsync();
+            LoadData();
+
         }
 
         private async void LoadData()
         {
-            await LoadDataAsync();
+            //await LoadDataAsync();
+            await DemoUploadAsync();
         }
 
-        public async System.Threading.Tasks.Task LoadDataAsync()
+        public async Task LoadDataAsync()
         {
             var filepath = "C:\\Users\\USER\\Documents\\TaskApp.xlsx";
             if (!File.Exists(filepath))
@@ -134,7 +135,7 @@ namespace TASKMNGMT.Models.ViewModels
             var bulkCollection = new BulkObservableCollection<TaskMang>();
 
             bulkCollection.AddRange(tasks);
-            Tasks = new ObservableRangeCollection<TaskMang>(bulkCollection);
+            //Tasks = new ObservableRangeCollection<TaskMang>(bulkCollection);
         }
 
         private List<TaskMang> LoadTasksFromExcel(string filepath)
@@ -185,26 +186,24 @@ namespace TASKMNGMT.Models.ViewModels
         }
 
 
-        public async System.Threading.Tasks.Task DemoUploadAsync()
+        public async Task DemoUploadAsync()
         {
-            var taskstoAdd = new List<TaskMang>();
+            //var taskstoAdd = new List<TaskMang>();
 
-            for (int i = 0; i < 4000; i++)
-            {
-                var taskemo = new TaskMang
-                {
-                    id = i,
-                    TaskName = $"Demo task description {i}",
-                    TaskStartTime = "000",
-                    TaskEndTime = "000",
-                    TaskTimeTaken = i.ToString(),
-                    ProjectName = "Default"
-                };
-                taskemo.SelectedProject = _projectDetailsViewModel.Projects.FirstOrDefault(p => p.ProjectName == taskemo.ProjectName);
-                taskstoAdd.Add(taskemo);
-                
-            }
-            Tasks.AddRange(taskstoAdd);
+            await LoadTasksFromExcel();
+            //await Task.Run(() =>
+            //{
+
+            //    LoadTasksFromExcel();
+            //});
+            //await MainThread.InvokeOnMainThreadAsync(() =>
+            //{
+            //    foreach(TaskMang task in taskstoAdd)
+            //    {
+            //        Tasks.Add(task);
+            //    }
+
+            //});
         }
 
 
@@ -226,65 +225,7 @@ namespace TASKMNGMT.Models.ViewModels
             OnPropertyChanged(nameof(isselected));
         }
 
-        //private async Task LoadTasksFromExcelAsync()
-        //{
-        //    var filepath = "C:\\Users\\USER\\Documents\\TaskApp.xlsx";
-
-        //    if (!File.Exists(filepath))
-        //    {
-        //        await _projectDetailsViewModel.EnsureExcelFile();
-        //    }
-
-        //    var tasking = await Task.Run(() =>
-        //    {
-        //        var temptasking = new List<TaskMang>();
-
-        //        try
-        //        {
-        //            using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Open(filepath, false))
-        //            {
-        //                WorkbookPart workbookPart = spreadsheetDocument.WorkbookPart;
-        //                Sheet taskSheet = workbookPart.Workbook.Sheets.Elements<Sheet>().FirstOrDefault(s => s.Name == "Task_Master");
-
-        //                if (taskSheet == null)
-        //                {
-        //                    throw new Exception("Sheet 'Task_Master' not found");
-        //                }
-
-        //                WorksheetPart worksheetPart = (WorksheetPart)workbookPart.GetPartById(taskSheet.Id);
-        //                SheetData sheetData = worksheetPart.Worksheet.Elements<SheetData>().FirstOrDefault();
-
-        //                if (sheetData != null)
-        //                {
-        //                    foreach (Row row in sheetData.Elements<Row>().Skip(1))
-        //                    {
-        //                        var task = new TaskMang
-        //                        {
-        //                            id = int.Parse(GetCellValue(workbookPart, row.Elements<Cell>().ElementAtOrDefault(0))),
-        //                            TaskName = GetCellValue(workbookPart, row.Elements<Cell>().ElementAtOrDefault(1)),
-        //                            TaskStartTime = GetCellValue(workbookPart, row.Elements<Cell>().ElementAtOrDefault(2)),
-        //                            TaskEndTime = GetCellValue(workbookPart, row.Elements<Cell>().ElementAtOrDefault(3)),
-        //                            TaskTimeTaken = GetCellValue(workbookPart, row.Elements<Cell>().ElementAtOrDefault(4)),
-        //                            ProjectName = GetCellValue(workbookPart, row.Elements<Cell>().ElementAtOrDefault(5)),
-        //                        };
-
-        //                        task.SelectedProject = _projectDetailsViewModel.Projects.FirstOrDefault(p => p.ProjectName == task.ProjectName);
-        //                        temptasking.Add(task);
-        //                    }
-        //                }
-        //            }
-        //        }
-        //        catch (Exception e)
-        //        {
-        //            Debug.WriteLine($"Error loading tasks: {e.Message}");
-        //        }
-
-        //        return temptasking;
-        //    });
-
-        //    // Initialize Tasks with the loaded data
-        //    Tasks = new ObservableCollection<TaskMang>(tasking);
-        //}
+        
 
 
 
@@ -292,98 +233,98 @@ namespace TASKMNGMT.Models.ViewModels
 
 
 
-        //[RelayCommand]
-        //private void RefreashCommand()
-        //{
-        //    IsRefreshing = true;
-        //    LoadTasksFromExcel();
-        //    var refreshtodos = new ObservableCollection<TaskMang>(Tasks);   
-        //    Tasks.Clear();
+        [RelayCommand]
+        private async Task Refreash()
+        {
+            IsRefreshing = true;
+            await LoadTasksFromExcel();
+            var refreshtodos = new ObservableCollection<TaskMang>(Tasks);
+            Tasks.Clear();
 
-        //    foreach (var todo in refreshtodos)
-        //    {
-        //        Tasks.Add(new TaskMang
-        //        {
-        //            id = todo.id,
-        //            TaskName = todo.TaskName,
-        //            TaskStartTime = todo.TaskStartTime,
-        //            TaskEndTime = todo.TaskEndTime,
-        //            TaskTimeTaken = todo.TaskTimeTaken,
-        //            ProjectName = todo.ProjectName,
-        //        });
-        //    }
-        //    IsRefreshing = false;
-        //}
+            foreach (var todo in refreshtodos)
+            {
+                Tasks.Add(new TaskMang
+                {
+                    id = todo.id,
+                    TaskName = todo.TaskName,
+                    TaskStartTime = todo.TaskStartTime,
+                    TaskEndTime = todo.TaskEndTime,
+                    TaskTimeTaken = todo.TaskTimeTaken,
+                    ProjectName = todo.ProjectName,
+                });
+            }
+            IsRefreshing = false;
+        }
 
-        //private async void LoadTasksFromExcel()
-        //{
-        //    Tasks.Clear();
-        //    var filepath = "C:\\Users\\USER\\Documents\\TaskApp.xlsx";
+        private async Task LoadTasksFromExcel()
+        {
+            Tasks.Clear();
+            var filepath = "C:\\Users\\USER\\Documents\\TaskApp.xlsx";
 
-        //    if (!File.Exists(filepath))
-        //    {
-        //        await _projectDetailsViewModel.EnsureExcelFile();
-        //    }
+            if (!File.Exists(filepath))
+            {
+                await _projectDetailsViewModel.EnsureExcelFile();
+            }
 
-        //    var tasking = await Task.Run(() =>
-        //    {
-        //        var temptasking = new List<TaskMang>();
+            var tasking = await Task.Run(() =>
+            {
+                var temptasking = new List<TaskMang>();
 
-        //        try
-        //        {
-        //            // Open the Excel file in OpenXML format.
-        //            using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Open(filepath, false))
-        //            {
-        //                // Get the workbook part
-        //                WorkbookPart workbookPart = spreadsheetDocument.WorkbookPart;
+                try
+                {
+                    // Open the Excel file in OpenXML format.
+                    using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Open(filepath, false))
+                    {
+                        // Get the workbook part
+                        WorkbookPart workbookPart = spreadsheetDocument.WorkbookPart;
 
-        //                // Get the first worksheet (or by name "Task_Master")
-        //                Sheet taskSheet = workbookPart.Workbook.Sheets.Elements<Sheet>().FirstOrDefault(s => s.Name == "Task_Master");
-        //                if (taskSheet == null)
-        //                {
-        //                    throw new Exception("Sheet 'Task_Master' not found");
-        //                }
+                        // Get the first worksheet (or by name "Task_Master")
+                        Sheet taskSheet = workbookPart.Workbook.Sheets.Elements<Sheet>().FirstOrDefault(s => s.Name == "Task_Master");
+                        if (taskSheet == null)
+                        {
+                            throw new Exception("Sheet 'Task_Master' not found");
+                        }
 
-        //                // Get the worksheet part for that sheet
-        //                WorksheetPart worksheetPart = (WorksheetPart)workbookPart.GetPartById(taskSheet.Id);
+                        // Get the worksheet part for that sheet
+                        WorksheetPart worksheetPart = (WorksheetPart)workbookPart.GetPartById(taskSheet.Id);
 
-        //                // Access the data in the worksheet
-        //                SheetData sheetData = worksheetPart.Worksheet.Elements<SheetData>().FirstOrDefault();
+                        // Access the data in the worksheet
+                        SheetData sheetData = worksheetPart.Worksheet.Elements<SheetData>().FirstOrDefault();
 
-        //                if (sheetData != null)
-        //                {
-        //                    // Loop through each row starting from the second row (to skip the header)
-        //                    foreach (Row row in sheetData.Elements<Row>().Skip(1))
-        //                    {
-        //                        // Extract each cell value from the row
-        //                        var task = new TaskMang
-        //                        {
-        //                            id = int.Parse(GetCellValue(workbookPart, row.Elements<Cell>().ElementAtOrDefault(0))),
-        //                            TaskName = GetCellValue(workbookPart, row.Elements<Cell>().ElementAtOrDefault(1)),
-        //                            TaskStartTime = GetCellValue(workbookPart, row.Elements<Cell>().ElementAtOrDefault(2)),
-        //                            TaskEndTime = GetCellValue(workbookPart, row.Elements<Cell>().ElementAtOrDefault(3)),
-        //                            TaskTimeTaken = GetCellValue(workbookPart, row.Elements<Cell>().ElementAtOrDefault(4)),
-        //                            ProjectName = GetCellValue(workbookPart, row.Elements<Cell>().ElementAtOrDefault(5)),
-        //                        };
+                        if (sheetData != null)
+                        {
+                            // Loop through each row starting from the second row (to skip the header)
+                            foreach (Row row in sheetData.Elements<Row>().Skip(1))
+                            {
+                                // Extract each cell value from the row
+                                var task = new TaskMang
+                                {
+                                    id = int.Parse(GetCellValue(workbookPart, row.Elements<Cell>().ElementAtOrDefault(0))),
+                                    TaskName = GetCellValue(workbookPart, row.Elements<Cell>().ElementAtOrDefault(1)),
+                                    TaskStartTime = GetCellValue(workbookPart, row.Elements<Cell>().ElementAtOrDefault(2)),
+                                    TaskEndTime = GetCellValue(workbookPart, row.Elements<Cell>().ElementAtOrDefault(3)),
+                                    TaskTimeTaken = GetCellValue(workbookPart, row.Elements<Cell>().ElementAtOrDefault(4)),
+                                    ProjectName = GetCellValue(workbookPart, row.Elements<Cell>().ElementAtOrDefault(5)),
+                                };
 
-        //                        // Match project from ViewModel and add to temporary list
-        //                        task.SelectedProject = _projectDetailsViewModel.Projects.FirstOrDefault(p => p.ProjectName == task.ProjectName);
-        //                        temptasking.Add(task);
-        //                    }
-        //                }
-        //            }
-        //        }
-        //        catch (Exception e)
-        //        {
-        //            Debug.WriteLine($"Error loading tasks: {e.Message}");
-        //        }
+                                // Match project from ViewModel and add to temporary list
+                                task.SelectedProject = _projectDetailsViewModel.Projects.FirstOrDefault(p => p.ProjectName == task.ProjectName);
+                                temptasking.Add(task);
+                            }
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.WriteLine($"Error loading tasks: {e.Message}");
+                }
 
-        //        return temptasking;
-        //    });
+                return temptasking;
+            });
 
-        //    // Final update to the task list
-        //    UpdateTaskList(tasking);
-        //}
+            // Final update to the task list
+            UpdateTaskList(tasking);
+        }
 
         private string GetCellValue(WorkbookPart workbookPart, Cell cell)
         {
@@ -402,54 +343,17 @@ namespace TASKMNGMT.Models.ViewModels
             return value;
         }
 
-        //private void UpdateTaskList(List<TaskMang> tasking)
-        //{
-        //    foreach (var task in tasking)
-        //    {
-        //        // Application is on hold while adding to Task Observable list
-        //        //Tasks.Add(task); // Add to the observable collection
-        //    }
-        //}
+        private void UpdateTaskList(List<TaskMang> tasking)
+        {
+            foreach (var task in tasking)
+            {
+                // Application is on hold while adding to Task Observable list
+                Tasks.Add(task); // Add to the observable collection
+            }
+        }
 
 
-        //private void EnsureExcelFile()
-        //{
-        //    string filePath = "C:\\Users\\USER\\Documents\\TaskApp.xlsx";
-
-        //    if (!File.Exists(filePath))
-        //    {
-        //        using (var package = new ExcelPackage(new FileInfo(filePath)))
-        //        {
-        //            var workbook = package.Workbook;
-        //            var taskmastersheet = workbook.Worksheets.Add("Task_Master");
-        //            taskmastersheet.Cells[1, 1].Value = "TASK_ID";
-        //            taskmastersheet.Cells[1, 2].Value = "TASK_NAME";
-        //            taskmastersheet.Cells[1, 3].Value = "START_TIME";
-        //            taskmastersheet.Cells[1, 4].Value = "END_TIME";
-        //            taskmastersheet.Cells[1, 5].Value = "TIME_TAKEN";
-        //            taskmastersheet.Cells[1, 6].Value = "PROJECT_NAME";
-
-        //            var todomastersheet = workbook.Worksheets.Add("Todo_Master");
-        //            todomastersheet.Cells[1, 1].Value = "TODO_ID";
-        //            todomastersheet.Cells[1, 2].Value = "TODO_NAME";
-        //            todomastersheet.Cells[1, 3].Value = "STATUS";
-        //            todomastersheet.Cells[1, 4].Value = "COMMENTS";
-        //            todomastersheet.Cells[1, 5].Value = "ADD_DATE";
-        //            todomastersheet.Cells[1, 6].Value = "END_DATE";
-        //            todomastersheet.Cells[1, 7].Value = "PROJECT_NAME";
-
-        //            var projectmaster = workbook.Worksheets.Add("Project_Master");
-        //            projectmaster.Cells[1, 1].Value = "PROJECT_ID";
-        //            projectmaster.Cells[1, 2].Value = "PROJECT_NAME";
-        //            projectmaster.Cells[1, 3].Value = "PROJECT_DESCRIPTION";
-        //            projectmaster.Cells[1, 4].Value = "PROJECT_STATUS";
-        //            projectmaster.Cells[1, 5].Value = "ADD_DATE";
-        //            projectmaster.Cells[1, 6].Value = "DONE_DATE";
-
-        //            package.Save();
-        //        }
-        //    }
-        //}
+        
 
         private void OnTimerChanged(object? sender, ElapsedEventArgs e)
         {

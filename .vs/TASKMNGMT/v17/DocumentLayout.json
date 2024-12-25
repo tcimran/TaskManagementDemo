@@ -1,121 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Linux\\MY_PROJECTS\\other\\TaskManagementDemo\\TASKMNGMT\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{56F92F62-C464-40E7-A5E6-80FA718CE92E}|TASKMNGMT\\TASKMNGMT.csproj|d:\\linux\\my_projects\\other\\taskmanagementdemo\\taskmngmt\\taskmngmt\\models\\viewmodels\\taskmaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56F92F62-C464-40E7-A5E6-80FA718CE92E}|TASKMNGMT\\TASKMNGMT.csproj|solutionrelative:taskmngmt\\models\\viewmodels\\taskmaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56F92F62-C464-40E7-A5E6-80FA718CE92E}|TASKMNGMT\\TASKMNGMT.csproj|D:\\Linux\\MY_PROJECTS\\other\\TaskManagementDemo\\TASKMNGMT\\taskmngmt\\models\\viewmodels\\projectdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56F92F62-C464-40E7-A5E6-80FA718CE92E}|TASKMNGMT\\TASKMNGMT.csproj|solutionrelative:taskmngmt\\models\\viewmodels\\projectdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56F92F62-C464-40E7-A5E6-80FA718CE92E}|TASKMNGMT\\TASKMNGMT.csproj|d:\\linux\\my_projects\\other\\taskmanagementdemo\\taskmngmt\\taskmngmt\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{56F92F62-C464-40E7-A5E6-80FA718CE92E}|TASKMNGMT\\TASKMNGMT.csproj|solutionrelative:taskmngmt\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56F92F62-C464-40E7-A5E6-80FA718CE92E}|TASKMNGMT\\TASKMNGMT.csproj|d:\\linux\\my_projects\\other\\taskmanagementdemo\\taskmngmt\\taskmngmt\\models\\helperclasses\\bulkobservablecollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56F92F62-C464-40E7-A5E6-80FA718CE92E}|TASKMNGMT\\TASKMNGMT.csproj|solutionrelative:taskmngmt\\models\\helperclasses\\bulkobservablecollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56F92F62-C464-40E7-A5E6-80FA718CE92E}|TASKMNGMT\\TASKMNGMT.csproj|d:\\linux\\my_projects\\other\\taskmanagementdemo\\taskmngmt\\taskmngmt\\pages\\mainpage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{56F92F62-C464-40E7-A5E6-80FA718CE92E}|TASKMNGMT\\TASKMNGMT.csproj|solutionrelative:taskmngmt\\pages\\mainpage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56F92F62-C464-40E7-A5E6-80FA718CE92E}|TASKMNGMT\\TASKMNGMT.csproj|d:\\linux\\my_projects\\other\\taskmanagementdemo\\taskmngmt\\taskmngmt\\models\\helperclasses\\taskdatatemplateselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56F92F62-C464-40E7-A5E6-80FA718CE92E}|TASKMNGMT\\TASKMNGMT.csproj|solutionrelative:taskmngmt\\models\\helperclasses\\taskdatatemplateselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
-        {
-          "DockedWidth": 92,
-          "SelectedChildIndex": 5,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TaskDataTemplateSelector.cs",
-              "DocumentMoniker": "D:\\Linux\\MY_PROJECTS\\other\\TaskManagementDemo\\TASKMNGMT\\TASKMNGMT\\Models\\HelperClasses\\TaskDataTemplateSelector.cs",
-              "RelativeDocumentMoniker": "TASKMNGMT\\Models\\HelperClasses\\TaskDataTemplateSelector.cs",
-              "ToolTip": "D:\\Linux\\MY_PROJECTS\\other\\TaskManagementDemo\\TASKMNGMT\\TASKMNGMT\\Models\\HelperClasses\\TaskDataTemplateSelector.cs",
-              "RelativeToolTip": "TASKMNGMT\\Models\\HelperClasses\\TaskDataTemplateSelector.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T15:50:33.209Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "D:\\Linux\\MY_PROJECTS\\other\\TaskManagementDemo\\TASKMNGMT\\TASKMNGMT\\Pages\\MainPage.xaml.cs",
-              "RelativeDocumentMoniker": "TASKMNGMT\\Pages\\MainPage.xaml.cs",
-              "ToolTip": "D:\\Linux\\MY_PROJECTS\\other\\TaskManagementDemo\\TASKMNGMT\\TASKMNGMT\\Pages\\MainPage.xaml.cs",
-              "RelativeToolTip": "TASKMNGMT\\Pages\\MainPage.xaml.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T15:45:37.475Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "D:\\Linux\\MY_PROJECTS\\other\\TaskManagementDemo\\TASKMNGMT\\TASKMNGMT\\Pages\\MainPage.xaml",
-              "RelativeDocumentMoniker": "TASKMNGMT\\Pages\\MainPage.xaml",
-              "ToolTip": "D:\\Linux\\MY_PROJECTS\\other\\TaskManagementDemo\\TASKMNGMT\\TASKMNGMT\\Pages\\MainPage.xaml",
-              "RelativeToolTip": "TASKMNGMT\\Pages\\MainPage.xaml",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAkwF4AAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-10T15:39:15.647Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BulkObservableCollection.cs",
-              "DocumentMoniker": "D:\\Linux\\MY_PROJECTS\\other\\TaskManagementDemo\\TASKMNGMT\\TASKMNGMT\\Models\\HelperClasses\\BulkObservableCollection.cs",
-              "RelativeDocumentMoniker": "TASKMNGMT\\Models\\HelperClasses\\BulkObservableCollection.cs",
-              "ToolTip": "D:\\Linux\\MY_PROJECTS\\other\\TaskManagementDemo\\TASKMNGMT\\TASKMNGMT\\Models\\HelperClasses\\BulkObservableCollection.cs",
-              "RelativeToolTip": "TASKMNGMT\\Models\\HelperClasses\\BulkObservableCollection.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T15:37:09.244Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProjectDetailsViewModel.cs",
-              "DocumentMoniker": "D:\\Linux\\MY_PROJECTS\\other\\TaskManagementDemo\\TASKMNGMT\\TASKMNGMT\\Models\\ViewModels\\ProjectDetailsViewModel.cs",
-              "RelativeDocumentMoniker": "TASKMNGMT\\Models\\ViewModels\\ProjectDetailsViewModel.cs",
-              "ToolTip": "D:\\Linux\\MY_PROJECTS\\other\\TaskManagementDemo\\TASKMNGMT\\TASKMNGMT\\Models\\ViewModels\\ProjectDetailsViewModel.cs",
-              "RelativeToolTip": "TASKMNGMT\\Models\\ViewModels\\ProjectDetailsViewModel.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAQwCsAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T12:54:27.344Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TaskMaViewModel.cs",
-              "DocumentMoniker": "D:\\Linux\\MY_PROJECTS\\other\\TaskManagementDemo\\TASKMNGMT\\TASKMNGMT\\Models\\ViewModels\\TaskMaViewModel.cs",
-              "RelativeDocumentMoniker": "TASKMNGMT\\Models\\ViewModels\\TaskMaViewModel.cs",
-              "ToolTip": "D:\\Linux\\MY_PROJECTS\\other\\TaskManagementDemo\\TASKMNGMT\\TASKMNGMT\\Models\\ViewModels\\TaskMaViewModel.cs",
-              "RelativeToolTip": "TASKMNGMT\\Models\\ViewModels\\TaskMaViewModel.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAADwv1QAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T19:32:34.468Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
         {
           "DockedWidth": 92,
           "SelectedChildIndex": -1,

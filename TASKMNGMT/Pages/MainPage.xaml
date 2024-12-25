@@ -12,17 +12,26 @@
         <vm:MainPageViewModels />
 
     </ContentPage.BindingContext>
-    <ScrollView>
-        <Grid Padding="20" Background="#fff">
+    <!--Main GRID-->
+        <Grid Padding="10" Background="#fff">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
+                <!--FOR TOP CONTENTS-->
+                <!--FOR TIMER AND STATUS-->
+                <!--FOR ENTERIES AND BUTTONS-->
                 <RowDefinition Height="Auto"/>
                 <RowDefinition x:Name="ToDoListRow" Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <!--#region Projects-->
-            <StackLayout Grid.Row="0" x:Name="TopContainers" Background="#fff">
-                <Label Text="Task Management" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium"/>
+
+            <!--GRID ROW 0 TO MAIN-->
+            <!--#region TOP CONTAINER 1 ROW IN MAIN GRID-->
+            <Grid Grid.Row="0" x:Name="TopContainers">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Text="Task Management" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" TextColor="#512BD4"/>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="Start">
                     <Switch 
                         IsToggled="{Binding projectvm.SelectedProject.IsCompleted}"
@@ -38,174 +47,148 @@
                     <Button Text="+" Command="{Binding projectvm.OpenAddProjectPopupCommand}" HeightRequest="10" />
                     <Button Text="-" Command="{Binding projectvm.DeleteProjectCommand}" HeightRequest="10" IsEnabled="{Binding projectvm.IsProjectSelected}"/>
                 </StackLayout>
-            </StackLayout>
+            </Grid>
             <!--#endregion-->
 
+            <!--grid Main 2 row-->
             <!--#region TimerUI -->
-            <StackLayout Grid.Row="1">
-                <Label Text="{Binding taskvm.Timer}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="70"/>
-                <StackLayout Orientation="Vertical">
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="Current Task :"/>
-                        <Label Text="{Binding taskvm.CurrentTask}"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="Task Time (min) :"/>
-                        <Label Text="{Binding taskvm.TaskTimer}"/>
-                    </StackLayout>
-                </StackLayout>
-
-                <Entry Placeholder="Enter Your Task" TextColor="#512BD4" HorizontalTextAlignment="Center" Text="{Binding taskvm.Taskname}" IsEnabled="{Binding taskvm.Isinputable}"/>
-
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                    <Button Text="{Binding taskvm.StartButtonText}" Margin="10" Command="{Binding taskvm.StartTimerCommand}" IsEnabled="{Binding taskvm.istimer}"/>
-                    <Button Text="Stop" Margin="10" Command="{Binding taskvm.StopTimerCommand}" IsEnabled="{Binding taskvm.ispause}"/>
-                    <Button Text="Pause" Margin="10" Command="{Binding taskvm.PauseTimerCommand}" IsEnabled="{Binding taskvm.ispause}"/>
-                    <Button Text="New Task" Margin="10" IsEnabled="{Binding taskvm.IsnewTask}" Command="{Binding taskvm.AddTaskCommand}"/>
-                    <Button Text="Save" Margin="10" Command="{Binding taskvm.SaveTaskCommand}"/>
-                    <Button Text="{Binding BtnText}" Margin="10" Command="{Binding ToggleToDoListCommand}" BackgroundColor="{Binding BtnColor}"/>
-                </StackLayout>
-            </StackLayout>
-            <!--#endregion-->
-
-
-            <!--#region ListViewDataGrid -->
-            <StackLayout Grid.Row="2" IsVisible="{Binding isTaskListVisible}" x:Name="mainStackLayout">
-                <!--Header Row--> 
-                <Grid Padding="10" BackgroundColor="#f0f0f0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-
-                    <Label Text="ID" Grid.Column="0" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
-                    <Label Text="Task Name" Grid.Column="1" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
-                    <Label Text="Start Time" Grid.Column="2" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
-                    <Label Text="End Time" Grid.Column="3" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
-                    <Label Text="Time Taken" Grid.Column="4" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
-                    <Label Text="Project Name" Grid.Column="5" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
-
-
+            <Grid  Padding="20" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Text="{Binding taskvm.Timer}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="70" Grid.Row="0" TextColor="#512BD4"/>
+                <Grid  Grid.Row="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Current Task :" Grid.Column="0" TextColor="#512BD4"/>
+                            <Label Text="{Binding taskvm.CurrentTask}" Grid.Column="1" TextColor="#512BD4"/>
+                        </Grid>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Task Time (min) :" Grid.Column="0" TextColor="#512BD4"/>
+                            <Label Text="{Binding taskvm.TaskTimer}" Grid.Column="1" TextColor="#512BD4"/>
+                        </Grid>
+                    </Grid>
                 </Grid>
-                <ScrollView HeightRequest="400" BindingContext="{Binding}">
-                    <ListView ItemsSource="{Binding Source={RelativeSource AncestorType={x:Type vm:MainPageViewModels}},Path=taskvm.Tasks}" SelectionMode="Single" >
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell Appearing="OnViewCellAppearing">
-                                    <SwipeView>
-                                        <SwipeView.LeftItems>
-                                            <SwipeItems SwipeBehaviorOnInvoked="Close">
-                                                <SwipeItem Text="{Binding Source={RelativeSource AncestorType={x:Type vm:MainPageViewModels}},Path=taskvm.BtnStatus}"
-                                        BackgroundColor="LightBlue"
-                                                           Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MainPageViewModels}},Path=taskvm.EditTaskCommand}"
-                                                           CommandParameter="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}}}"
-                                    
-                                         />
-                                                <SwipeItem Text="Delete"
-                                         BackgroundColor="LightCoral"
-                                         Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MainPageViewModels}},Path=taskvm.DeleteTaskCommand}"
-                                         CommandParameter="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}}}"
-                                                           
-                                                           />
-                                            </SwipeItems>
-                                        </SwipeView.LeftItems>
-                                        <SwipeView.Content>
-                                            <Grid Padding="10" x:Name="gridcontent">
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="Auto" />
-                                                    <ColumnDefinition Width="*" />
-                                                    <ColumnDefinition Width="*" />
-                                                    <ColumnDefinition Width="*" />
-                                                    <ColumnDefinition Width="*" />
-                                                    <ColumnDefinition Width="*" />
 
-                                                </Grid.ColumnDefinitions>   
-                                                <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=id}" Grid.Column="0"  IsReadOnly="True" IsEnabled="False"/>
-                                                <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=TaskName}" Grid.Column="1" IsEnabled="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=IsEditable}"/>
-                                                <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=TaskStartTime}" Grid.Column="2" IsEnabled="False"/>
-                                                <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=TaskEndTime}" Grid.Column="3" IsEnabled="False"/>
-                                                <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=TaskTimeTaken}" Grid.Column="4" IsEnabled="False"/>
-                                                <!--<Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=SelectedProject.ProjectName}" Grid.Column="5"
-                                                 IsEnabled="False"
-                                                 IsVisible="{Binding Source={RelativeSource AncestorType={x:Type vm:MainPageViewModels}},Path=taskvm.showentryfield}"
-                                                       
-                                                       />  
-                                                <Picker 
-                                                        ItemsSource="{Binding Source={RelativeSource AncestorType={x:Type vm:MainPageViewModels}},Path=projectvm.Projects}"  
-                                                        ItemDisplayBinding="{Binding ProjectName}"
-                                                        SelectedItem="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=SelectedProject}" Grid.Column="5"
-                                                        FontSize="12"
-                                                        IsVisible="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=IsEditable}"
 
-                                                        />-->
 
-                                            </Grid>
-                                        </SwipeView.Content>
-                                    </SwipeView>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </ScrollView>
+                <Grid Grid.Row="2" HorizontalOptions="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Entry Placeholder="Enter Your Task" TextColor="#512BD4" HorizontalTextAlignment="Center" Text="{Binding taskvm.Taskname}" IsEnabled="{Binding taskvm.Isinputable}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6"/>
 
-            </StackLayout>
-            
+                    <Button Text="{Binding taskvm.StartButtonText}" Margin="10" Command="{Binding taskvm.StartTimerCommand}" IsEnabled="{Binding taskvm.istimer}" Grid.Column="0" Grid.Row="1"/>
+                    <Button Text="Stop" Margin="10" Command="{Binding taskvm.StopTimerCommand}" IsEnabled="{Binding taskvm.ispause}" Grid.Column="1" Grid.Row="1"/>
+                    <Button Text="Pause" Margin="10" Command="{Binding taskvm.PauseTimerCommand}" IsEnabled="{Binding taskvm.ispause}" Grid.Column="2" Grid.Row="1"/>
+                    <Button Text="New Task" Margin="10" IsEnabled="{Binding taskvm.IsnewTask}" Command="{Binding taskvm.AddTaskCommand}" Grid.Column="3" Grid.Row="1"/>
+                    <Button Text="Save" Margin="10" Command="{Binding taskvm.SaveTaskCommand}" Grid.Column="4" Grid.Row="1"/>
+                    <Button Text="{Binding BtnText}" Margin="10" Command="{Binding ToggleToDoListCommand}" BackgroundColor="{Binding BtnColor}" Grid.Column="5" Grid.Row="1"/>
+                </Grid>
+            </Grid>
             <!--#endregion-->
-
-            <!--#region DataGridTask -->
-            <!--<StackLayout Grid.Row="2" x:Name="TaskListContainer" IsVisible="{Binding isTaskListVisible}">
-                <Label Text="Task List" FontSize="Medium" HorizontalOptions="Center"/>
-
-                --><!--DataGrid--><!--
-                <dg:DataGrid
-                    BorderColor="DarkBlue"
-                    HeaderBackground="#FFF"
-                    ItemsSource="{Binding taskvm.Tasks}"
-                    SelectionMode="Single"
-                    SelectedItem="{Binding taskvm.SelectedItem}"
-                    PullToRefreshCommand="{Binding taskvm.RefreashCommandCommand}"
-                    IsRefreshing="{Binding taskvm.IsRefreshing}"
-                    ActiveRowColor="LightCyan"
-                    x:Name="_dataGrid2"
-                    PaginationEnabled="{Binding taskvm.IsPagination}"
-                    PageSize="5"
-                    HeightRequest="280"
-    >
-                    <dg:DataGrid.Columns>
-                        <dg:DataGridColumn Title="id" PropertyName="id" IsVisible="False"/>
-                        <dg:DataGridColumn Title="TaskName" PropertyName="TaskName"/>
-                        <dg:DataGridColumn Title="TaskStartTime" PropertyName="TaskStartTime"/>
-                        <dg:DataGridColumn Title="TaskEndTime" PropertyName="TaskEndTime"/>
-                        <dg:DataGridColumn Title="TaskTimeTaken" PropertyName="TaskTimeTaken"/>
-                        <dg:DataGridColumn Title="ProjectName" PropertyName="ProjectName"/>
-                    </dg:DataGrid.Columns>
-                    <dg:DataGrid.RowsBackgroundColorPalette>
-                        <dg:PaletteCollection>
-                            <Color>#12F2F2</Color>
-                            <Color>#FFFFFF</Color>
-                        </dg:PaletteCollection>
-                    </dg:DataGrid.RowsBackgroundColorPalette>
-                </dg:DataGrid>
+            <!--#region ListViewDataGrid 3RD OF MAIN GRID-->
+            <Grid Grid.Row="2" IsVisible="{Binding isTaskListVisible}" x:Name="mainStackLayout">
+                <!--Header Row-->
+                <Grid Padding="10" BackgroundColor="#512BD4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="ID" Grid.Column="0" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#fff"/>
+                    <Label Text="Task Name" Grid.Column="1" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#fff"/>
+                    <Label Text="Start Time" Grid.Column="2" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#fff"/>
+                    <Label Text="End Time" Grid.Column="3" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#fff"/>
+                    <Label Text="Time Taken" Grid.Column="4" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#fff"/>
+                    <Label Text="Project Name" Grid.Column="5" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#fff"/>
+                </Grid>
 
 
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                    <Button Text="Edit" Margin="10" IsEnabled="{Binding taskvm.isselected}" Command="{Binding taskvm.OpenTaskEditPopupCommand}"/>
-                    <Button Text="Delete" Margin="10" Command="{Binding taskvm.DeleteTaskCommand}" IsEnabled="{Binding taskvm.isselected}"/>
-                    <Button Text="Refresh" Margin="10" Command="{Binding taskvm.RefreashCommandCommand}"/>
-                </StackLayout>
-            </StackLayout>-->
-            <!--#endregion-->
+                <CollectionView ItemsSource="{Binding Source={RelativeSource AncestorType={x:Type vm:MainPageViewModels}}, Path=taskvm.Tasks}"
+                SelectionMode="Single"
+                HorizontalScrollBarVisibility="Always"
+                VerticalScrollBarVisibility="Always">
+    <CollectionView.ItemTemplate>
+        <DataTemplate>
+            <SwipeView>
+                <SwipeView.LeftItems>
+                    <SwipeItems SwipeBehaviorOnInvoked="Close">
+                        <SwipeItem 
+                            Text="{Binding Source={RelativeSource AncestorType={x:Type vm:MainPageViewModels}}, Path=taskvm.BtnStatus}"
+                            BackgroundColor="LightBlue"
+                            Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MainPageViewModels}}, Path=taskvm.EditTaskCommand}"
+                            CommandParameter="{Binding .}" />
+                        <SwipeItem 
+                            Text="Delete"
+                            BackgroundColor="LightCoral"
+                            Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MainPageViewModels}}, Path=taskvm.DeleteTaskCommand}"
+                            CommandParameter="{Binding .}" />
+                    </SwipeItems>
+                </SwipeView.LeftItems>
+
+                <SwipeView.Content>
+                    <Grid Padding="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Entry Fields for Task Data -->
+                        <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=id}" Grid.Column="0" IsReadOnly="True" IsEnabled="False"/>
+                        <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=TaskName}" Grid.Column="1" IsEnabled="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=IsEditable}"/>
+                        <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=TaskStartTime}" Grid.Column="2" IsEnabled="False"/>
+                        <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=TaskEndTime}" Grid.Column="3" IsEnabled="False"/>
+                        <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=TaskTimeTaken}" Grid.Column="4" IsEnabled="False"/>
+                        <Entry Text="{Binding Source={RelativeSource AncestorType={x:Type xs:TaskMang}},Path=ProjectName}" Grid.Column="5" IsEnabled="False"/>
+                                    </Grid>
+                </SwipeView.Content>
+            </SwipeView>
+        </DataTemplate>
+    </CollectionView.ItemTemplate>
+</CollectionView>
+            </Grid>
+
+
+
+
 
             <!--#region ToDoList -->
-            <StackLayout Grid.Row="2" x:Name="ToDoListContainer" IsVisible="{Binding IsToDoListVisible}">
-                <Label Text="To Do List" FontSize="Medium" HorizontalOptions="Center"/>
+        <Grid Grid.Row="2" x:Name="ToDoListContainer" IsVisible="{Binding IsToDoListVisible}" BackgroundColor="Red">
+                    <Label Text="To Do List" FontSize="Medium" HorizontalOptions="Center"/>
 
-                <!--DataGrid-->
-                <dg:DataGrid
+                    <!--DataGrid-->
+                    <dg:DataGrid
                 BorderColor="DarkBlue"
                 HeaderBackground="#FFF"
                 ItemsSource="{Binding todovm.ToDos}"
@@ -215,38 +198,33 @@
                 IsRefreshing="{Binding todovm.IsRefreshing}"
                 ActiveRowColor="LightCyan"
                 x:Name="_dataGrid1"
-                PaginationEnabled="{Binding todovm.IsPagination}"
-                PageSize="5"
-                HeightRequest="280"
+                HeightRequest="500"
                 >
-                    <dg:DataGrid.Columns>
-                        <dg:DataGridColumn Title="Id" PropertyName="id" IsVisible="False"/>
-                        <dg:DataGridColumn Title="ToDo" PropertyName="ToDoTask"/>
-                        <dg:DataGridColumn Title="Comments" PropertyName="ToDoComments"/>
-                        <dg:DataGridColumn Title="Status" PropertyName="Status"/>
-                        <dg:DataGridColumn Title="Add Date" PropertyName="AddDate"/>
-                        <dg:DataGridColumn Title="Edit Date" PropertyName="EditDate"/>
-                    </dg:DataGrid.Columns>
-                    <!--<dg:DataGrid.RowsBackgroundColorPalette>
-                        <dg:PaletteCollection>
-                            <Color>#12F2F2</Color>
-                            <Color>#FFFFFF</Color>
-                        </dg:PaletteCollection>
-                    </dg:DataGrid.RowsBackgroundColorPalette>-->
-                </dg:DataGrid>
+                        <dg:DataGrid.Columns>
+                            <dg:DataGridColumn Title="Id" PropertyName="id" IsVisible="False"/>
+                            <dg:DataGridColumn Title="ToDo" PropertyName="ToDoTask"/>
+                            <dg:DataGridColumn Title="Comments" PropertyName="ToDoComments"/>
+                            <dg:DataGridColumn Title="Status" PropertyName="Status"/>
+                            <dg:DataGridColumn Title="Add Date" PropertyName="AddDate"/>
+                            <dg:DataGridColumn Title="Edit Date" PropertyName="EditDate"/>
+                        </dg:DataGrid.Columns>
+                    </dg:DataGrid>
 
 
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                    <Button Text="Add ToDo" Margin="10" Command="{Binding todovm.OpenAddTodoPopupCommand}"/>
-                    <Button Text="Edit" Margin="10" IsEnabled="{Binding todovm.isselected}" Command="{Binding todovm.EditToDoItemCommand}"/>
-                    <Button Text="Delete" Margin="10" Command="{Binding todovm.DeleteToDoItemCommand}" IsEnabled="{Binding todovm.isselected}"/>
-                    <Button Text="Refresh" Margin="10" Command="{Binding todovm.RefreashCommandCommand}"/>
-                </StackLayout>
-            </StackLayout>
+                    <Grid HorizontalOptions="Center">
+                        <Button Text="Add ToDo" Margin="10" Command="{Binding todovm.OpenAddTodoPopupCommand}"/>
+                        <Button Text="Edit" Margin="10" IsEnabled="{Binding todovm.isselected}" Command="{Binding todovm.EditToDoItemCommand}"/>
+                        <Button Text="Delete" Margin="10" Command="{Binding todovm.DeleteToDoItemCommand}" IsEnabled="{Binding todovm.isselected}"/>
+                        <Button Text="Refresh" Margin="10" Command="{Binding todovm.RefreashCommandCommand}"/>
+                    </Grid>
+                </Grid>
+
+
             <!--#endregion-->
 
 
 
         </Grid>
-    </ScrollView>
+
+
 </ContentPage>

@@ -55,5 +55,14 @@ public partial class MainPage : ContentPage
             }
         }
     }
+    private void OnRefreshing(object sender, EventArgs e)
+    {
+        // Trigger the RefreshCommand from ViewModel
+        var viewModel = (MainPageViewModels)BindingContext;
+        viewModel.taskvm.RefreashCommand.Execute(null);
+
+        // Optionally reset the IsRefreshing flag in the ViewModel if needed
+        viewModel.taskvm.IsRefreshing = false;
+    }
 
 }
